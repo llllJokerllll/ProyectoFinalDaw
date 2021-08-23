@@ -1,0 +1,24 @@
+<div *ngIf="usuario && !cargando; else showLogin" class="container" id="imagenFondo">
+  <app-encabezado></app-encabezado>
+  <router-outlet></router-outlet>
+</div>
+
+<ng-template #showLogin>
+  <div *ngIf="cargando" class="text-center">
+    <div class="loadingio-spinner-bean-eater-3anjl3h9j27">
+      <div class="ldio-ugfc9ct0jl">
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-login *ngIf="!cargando"></app-login>
+</ng-template>
